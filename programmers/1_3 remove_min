@@ -1,0 +1,7 @@
+func solution(_ arr:[Int]) -> [Int] {
+    var arr3 = arr
+    
+    arr3.remove(at: arr.index(of: arr3.min()!)!)
+    
+    return arr3.count > 0 ? arr3 : [-1] //.isEmpty
+}
