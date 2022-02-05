@@ -1,0 +1,26 @@
+import Foundation
+
+func solution(_ n:Int) -> Int {
+    //나뉘어지는 숫자의 루트까지만 나누어 확인해봄
+    var cnt = 0
+    
+    for i in 2...n {
+        if isPrime(i) == true {
+            cnt += 1
+        }
+    }
+    return cnt
+}
+func isPrime(_ num: Int) -> Bool {
+
+    for i in 2..<num {
+        for j in 2...Int(sqrt(Double(i)))+1 {
+            if i != j && i%j == 0 {
+                return false
+            }
+        }
+    }
+    return true
+}
+
+//test case 10 이후로 런타임 에러 해결 못함
