@@ -6,3 +6,4 @@ func solution(_ num:Int) -> String {
         return "Odd"
     }
 }
+ 
