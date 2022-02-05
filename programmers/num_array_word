@@ -1,0 +1,17 @@
+import Foundation
+
+func solution(_ s:String) -> Int {
+    var arr = s
+    arr = arr.replacingOccurrences(of:"one", with:"1")
+    arr = arr.replacingOccurrences(of:"two", with:"2")
+    arr = arr.replacingOccurrences(of:"three", with:"3")
+    arr = arr.replacingOccurrences(of:"four", with:"4")
+    arr = arr.replacingOccurrences(of:"five", with:"5")
+    arr = arr.replacingOccurrences(of:"six", with:"6")
+    arr = arr.replacingOccurrences(of:"seven", with:"7")
+    arr = arr.replacingOccurrences(of:"eight", with:"8")
+    arr = arr.replacingOccurrences(of:"nine", with:"9")
+    arr = arr.replacingOccurrences(of:"zero", with:"0")
+    
+    return Int(arr)!
+}
