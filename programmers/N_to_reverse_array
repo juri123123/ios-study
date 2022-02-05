@@ -1,0 +1,8 @@
+func solution(_ n:Int64) -> [Int] {
+    let s = String(n).reversed()
+    let result = s.map{
+        Int(String($0))!
+    }
+    
+    return result
+}
