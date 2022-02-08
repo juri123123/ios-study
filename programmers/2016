@@ -1,0 +1,12 @@
+func solution(_ a:Int, _ b:Int) -> String {
+    let week = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"]
+    let month = [31,29,31,30,31,30,31,31,30,31,30,31]
+    var sum = 0
+    
+    for i in 0..<a-1 {
+        sum += month[i]
+    }
+    sum += b+4
+ 
+    return week[sum%7]
+}
