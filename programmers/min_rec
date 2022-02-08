@@ -1,0 +1,24 @@
+import Foundation
+
+func solution(_ sizes:[[Int]]) -> Int {
+    var size = sizes
+    var len1 = 0
+    var len2 = 0
+    for i in 0..<size.count {
+        if size[i][0] < size[i][1]{
+            var tmp = size[i][0]
+            size[i][0] = size[i][1]
+            size[i][1] = tmp
+        }
+    }
+    for i in 0..<size.count{
+        if size[i][0] > len1 {
+            len1 = size[i][0]
+        }
+        if size[i][1] > len2 {
+            len2 = size[i][1]
+        }
+    }
+    
+    return len1 * len2
+}
